@@ -1,0 +1,22 @@
+{
+    "name": "shared",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "joi": "^17.2.1",
+        "moment": "^2.27.0",
+        "superagent": "^6.1.0",
+        "uuid": "^8.3.0"
+    },
+    "devDependencies": {
+        "jest": "^26.4.2"
+    },
+    "type": "module"
+}
