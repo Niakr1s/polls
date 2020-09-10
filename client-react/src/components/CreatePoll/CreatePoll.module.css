@@ -1,0 +1,29 @@
+.error {
+    color: red;
+    font-size: 12px;
+}
+
+.form {
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 50px 20px 50px;
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.createButton {
+    margin: 20px;
+    width: 100px;
+    height: 30px;
+}
+
+.inputRow {
+    margin: 10px 0px 10px 0px;
+}
+
+.inputNumberArea {
+    max-width: 40px;
+}

@@ -1,4 +1,4 @@
-import uuid from 'uuid';
+import * as uuid from 'uuid';
 import moment from 'moment';
 import joi from 'joi';
 
