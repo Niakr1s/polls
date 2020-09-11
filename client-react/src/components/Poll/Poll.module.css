@@ -1,0 +1,19 @@
+.form {
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px 50px 20px 50px;
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.choicesRemainedError {
+    color: red;
+}
+
+.table {
+    text-align: left;
+    margin: auto;
+}

@@ -1,0 +1,16 @@
+.choiceLine {
+    display: inline;
+}
+
+.choiceNameTD {}
+
+.choiceBar {
+    background-color: rgb(121, 189, 121);
+    text-align: left;
+    height: 100%;
+    text-indent: 5px;
+}
+
+.choiceBarTD {
+    width: 200px;
+}

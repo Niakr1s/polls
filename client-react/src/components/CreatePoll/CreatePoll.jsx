@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import { validatePollParams } from 'shared/poll/poll.js'
+import { validatePollParams } from '@polls/shared/poll/poll.js'
 import styles from './CreatePoll.module.css'
+import { postPollParams } from '../../api/api';
+import { Redirect } from 'react-router';
+import { eventHandler } from '../util/util';
 
 /** @type {import('../../../../shared/poll/poll').PollParams} */
 const initialValues = {
@@ -15,8 +18,13 @@ const initialValues = {
 }
 
 export function CreatePoll() {
-    function onSubmit(values) {
-        console.log(values);
+    /** @type {[import('@polls/shared/poll/poll').Poll]} */
+    const [poll, setPoll] = useState();
+
+    async function onSubmit(values) {
+        const poll = await postPollParams(values)
+        console.log(`got`, poll);
+        setPoll(poll);
     }
 
     /** 
@@ -29,11 +37,14 @@ export function CreatePoll() {
         }
     }
 
-    function eventHandler(handler) {
-        return function (event) {
-            event.preventDefault();
-            handler();
-        }
+    if (poll) {
+        return (
+            <Redirect to={{
+                pathname: `/poll/${poll.uuid}`,
+                state: { poll },
+            }}
+            ></Redirect>
+        )
     }
 
     return (
