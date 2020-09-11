@@ -1,19 +1,6 @@
 import { createPoll, validatePollParams, validatePoll } from "./poll.js"
+import { createValidPollParams } from './test.helper.js';
 import moment from 'moment'
-
-/** @returns {import('./poll').PollParams} */
-function createValidPollParams() {
-    const pollParams = {
-        name: 'MyPoll',
-        options: {
-            filter: 'none',
-            multiple: 2,
-            timeoutMinutes: 30,
-        },
-        choices: ['first', 'second', 'third'],
-    }
-    return pollParams;
-}
 
 test('createPoll', () => {
     const pollParams = createValidPollParams();
